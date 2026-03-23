@@ -4,6 +4,36 @@
 
 @use "variables" as v;
 
+.btn {
+  border-radius: 10px;
+  font-weight: 600;
+  border-color: var(--global-surface-border);
+}
+
+.btn-primary,
+.btn.btn-primary {
+  background-color: var(--global-theme-color);
+  border-color: var(--global-theme-color);
+}
+
+input,
+textarea,
+select,
+.form-control {
+  border-radius: 10px !important;
+  border: 1px solid var(--global-surface-border) !important;
+  background-color: var(--global-card-bg-color);
+  color: var(--global-text-color);
+}
+
+.form-control:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  box-shadow: 0 0 0 3px rgba(13, 110, 156, 0.18) !important;
+  border-color: var(--global-theme-color) !important;
+}
+
 // Code and syntax highlighting
 
 figure.highlight {

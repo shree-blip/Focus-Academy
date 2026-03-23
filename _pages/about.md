@@ -2,18 +2,18 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: US Tax Training Academy · Focus Academy · Tinkune, Kathmandu
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: Focus-logo.png
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>Focus Academy</p>
+    <p>Tinkune, Kathmandu</p>
+    <p>info@focusyourfinance.com</p>
 
-selected_papers: true # includes a list of papers marked as "selected={true}"
+selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 
 announcements:
@@ -22,13 +22,34 @@ announcements:
   limit: 5 # leave blank to include all the news in the `_news` folder
 
 latest_posts:
-  enabled: true
+  enabled: false
   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](https://www.reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+Welcome to the **US Tax Training Academy** by Focus Academy.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+Our flagship program is the **Complete Individual & Business Tax Preparation Program**, designed for accounting students, international accountants, tax preparers, bookkeepers, and entrepreneurs.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+The curriculum includes 22 core classes and 4 bonus modules with practical return-building assignments, software workflow training, and dual final assessments:
+
+- **Part A:** 90-minute written exam
+- **Part B:** 3-hour practical exam from a complete scenario package
+
+Learners are trained to prepare complete US tax returns including Form 1040 and foundational business filings (Forms 1120, 1120S, and 1065).
+
+All pre-recorded content is delivered through domain-locked video hosting and LMS-controlled access.
+
+## Mentors
+
+### Ganesh Dahal
+
+![Ganesh Dahal](/assets/img/ganesh-dahal-CeOebs1j.png){: width="220px" }
+
+CEO · US Certified Tax Mentor
+
+### Kalash Shrestha
+
+![Kalash Shrestha](/assets/img/kalash-shrestha-DopvHPEc.png){: width="220px" }
+
+Tax Accountant · US Certified Mentor

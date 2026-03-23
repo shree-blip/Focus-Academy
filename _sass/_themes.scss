@@ -19,6 +19,12 @@
   --global-distill-app-color: #{v.$grey-color};
   --global-divider-color: rgba(0, 0, 0, 0.1);
   --global-card-bg-color: #{v.$white-color};
+  --global-surface-color: #f8fafc;
+  --global-surface-border: #e2e8f0;
+  --global-soft-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+  --global-navbar-bg: rgba(255, 255, 255, 0.88);
+  --global-hero-grad-start: #e0f2fe;
+  --global-hero-grad-end: #fff7ed;
   --global-highlight-color: #{v.$red-color-dark};
   --global-back-to-top-bg-color: rgba(
     #{color.channel(v.$black-color, "red", v.$space: rgb)},
@@ -89,6 +95,12 @@ html[data-theme="dark"] {
   --global-distill-app-color: #{v.$grey-color-light};
   --global-divider-color: #424246;
   --global-card-bg-color: #{v.$grey-900};
+  --global-surface-color: #111827;
+  --global-surface-border: #1f2937;
+  --global-soft-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+  --global-navbar-bg: rgba(17, 24, 39, 0.9);
+  --global-hero-grad-start: #0f172a;
+  --global-hero-grad-end: #111827;
   --global-back-to-top-bg-color: rgba(
     #{color.channel(v.$white-color, "red", v.$space: rgb)},
     #{color.channel(v.$white-color, "green", v.$space: rgb)},

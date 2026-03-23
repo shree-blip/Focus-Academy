@@ -2,14 +2,17 @@
 layout: page
 permalink: /teaching/
 title: teaching
-description: Course materials, schedules, and resources for classes taught.
+description: US Tax Training Academy curriculum, modules, assignments, and assessment structure.
 nav: true
 nav_order: 6
-calendar: true
+calendar: false
+custom_js:
+	- app-auth
+	- teaching-booking
 ---
 
-This page displays a collection of courses with detailed schedules, materials, and resources. You can organize your courses by years, terms, or topics.
+This page contains the full **Complete Individual & Business Tax Preparation Program** with 22 core classes and 4 bonus modules.
 
-{% include calendar.liquid calendar_id='test@gmail.com' timezone='Asia/Shanghai' %}
+Progression is structured from beginner to expert and includes practical simulations, software workflow drills, assignments, and final written/practical assessments.
 
 {% include courses.liquid %}

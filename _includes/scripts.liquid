@@ -304,6 +304,16 @@
   <script defer src="{{ '/assets/js/progress-bar.js' | relative_url | bust_file_cache }}" type="text/javascript"></script>
 {% endif %}
 
+{% if page.google_auth %}
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+{% endif %}
+
+{% if page.custom_js %}
+  {% for file in page.custom_js %}
+    <script defer src="{{ '/assets/js/' | append: file | append: '.js' | relative_url | bust_file_cache }}"></script>
+  {% endfor %}
+{% endif %}
+
 {% if page.images %}
   <!-- Image Layouts -->
   {% if page.images.compare %}

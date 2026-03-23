@@ -7,12 +7,14 @@
       <div class="course-list">
         {% assign year_courses = year_group.items | sort: 'term' %}
         {% for course in year_courses %}
+          {% assign class_type = course.class_type | default: 'virtual' %}
           <div class="course-item">
             <h3 class="course-title">
               <a href="{{ course.url | relative_url }}">{{ course.title }}</a>
             </h3>
 
             <div class="course-meta">
+              <span class="course-type-badge course-type-{{ class_type }}">{{ class_type | capitalize }} Class</span>
               {% if course.term %}
                 <span class="course-term">{{ course.term }}</span>
               {% endif %}
@@ -27,6 +29,17 @@
                 {{ course.description | markdownify }}
               </div>
             {% endif %}
+
+            <div class="course-cta-wrap">
+              <button
+                class="btn btn-sm btn-primary book-class-btn"
+                data-course-title="{{ course.title | escape }}"
+                data-class-type="{{ class_type }}"
+              >
+                Book a {{ class_type | capitalize }} Class
+              </button>
+              <small class="course-cta-hint">Login required to continue</small>
+            </div>
           </div>
         {% endfor %}
       </div>

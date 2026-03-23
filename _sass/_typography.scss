@@ -19,6 +19,42 @@ strong {
   color: var(--global-text-color);
 }
 
+body {
+  font-size: 1.02rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: clamp(1.9rem, 4vw, 2.6rem);
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: clamp(1.45rem, 3vw, 1.9rem);
+  margin-top: 1.75rem;
+  margin-bottom: 0.8rem;
+}
+
+h3 {
+  font-size: clamp(1.2rem, 2.3vw, 1.4rem);
+  margin-top: 1.35rem;
+}
+
+p,
+li {
+  color: var(--global-text-color-light);
+}
+
 hr {
   border-top: 1px solid var(--global-divider-color);
 }
@@ -35,13 +71,19 @@ table {
   }
 }
 
+ul,
+ol {
+  margin-bottom: 1rem;
+  padding-left: 1.2rem;
+}
+
 a,
 table.table a {
   color: var(--global-theme-color);
 
   &:hover {
     color: var(--global-theme-color);
-    text-decoration: underline;
+    text-decoration: none;
   }
 
   &:hover:after :not(.nav-item.dropdown) {

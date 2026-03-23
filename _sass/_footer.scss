@@ -3,13 +3,15 @@
  ******************************************************************************/
 
 footer.fixed-bottom {
-  background-color: var(--global-footer-bg-color);
-  font-size: 0.75rem;
+  background-color: var(--global-card-bg-color);
+  border-top: 1px solid var(--global-surface-border);
+  font-size: 0.85rem;
+  box-shadow: 0 -8px 20px rgba(15, 23, 42, 0.05);
 
   .container {
     color: var(--global-footer-text-color);
-    padding-top: 9px;
-    padding-bottom: 8px;
+    padding-top: 12px;
+    padding-bottom: 12px;
     text-align: center;
   }
 
@@ -24,12 +26,19 @@ footer.fixed-bottom {
 }
 
 footer.sticky-bottom {
-  border-top: 1px solid var(--global-divider-color);
+  border-top: 1px solid var(--global-surface-border);
   padding-top: 40px;
   padding-bottom: 40px;
   font-size: 0.9rem;
+  background-color: var(--global-card-bg-color);
 
   .container {
     text-align: center;
+    color: var(--global-text-color-light);
   }
+}
+
+.footer-updated {
+  margin-left: 0.5rem;
+  color: var(--global-text-color-light);
 }
