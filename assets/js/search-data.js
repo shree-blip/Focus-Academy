@@ -3,27 +3,13 @@ const ninja = document.querySelector('ninja-keys');
 
 // add the home and posts menu items
 ninja.data = [{
-    id: "nav-about",
-    title: "about",
+    id: "nav-home",
+    title: "Home",
     section: "Navigation",
     handler: () => {
       window.location.href = "/";
     },
-  },{id: "nav-sign-in",
-          title: "Sign In",
-          description: "Sign in to Focus Academy to access your courses and learning dashboard",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/login/";
-          },
-        },{id: "nav-create-account",
-          title: "Create Account",
-          description: "Register for Focus Academy to begin your tax training journey",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/signup/";
-          },
-        },{id: "nav-mentors",
+  },{id: "nav-mentors",
           title: "mentors",
           description: "Focus Academy US Certified Mentors",
           section: "Navigation",
