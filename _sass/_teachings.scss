@@ -150,6 +150,15 @@
   gap: 0.8rem;
 }
 
+.app-auth-single {
+  display: block;
+  max-width: 100%;
+}
+
+.app-auth-single .app-card {
+  max-width: 100%;
+}
+
 .app-muted {
   color: var(--global-text-color-light);
 }

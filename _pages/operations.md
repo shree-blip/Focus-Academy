@@ -3,8 +3,7 @@ layout: page
 permalink: /operations/
 title: operations
 description: course, enrollment, and payment operations blueprint
-nav: true
-nav_order: 10
+nav: false
 ---
 
 ## Course and Payment Management Blueprint

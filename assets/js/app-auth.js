@@ -57,30 +57,47 @@
       return;
     }
 
-    container.innerHTML = `
-      <div class="app-auth-grid">
-        <div class="app-card">
+    const pageMode = container?.dataset?.page || "both"; // both, login, signup
+
+    const showBoth = pageMode === "both";
+    const showLoginOnly = pageMode === "login";
+    const showSignupOnly = pageMode === "signup";
+
+    let formHTML = `
+      <p id="auth-error" class="text-danger mb-3" style="display:none;"></p>
+    `;
+
+    if (showBoth || showLoginOnly) {
+      formHTML += `
+        <div class="app-card ${showLoginOnly ? 'w-100' : ''}">
           <h3>Login</h3>
           <form id="login-form">
             <input class="form-control mb-2" type="email" name="email" placeholder="Email" required>
             <input class="form-control mb-2" type="password" name="password" placeholder="Password" required>
-            <button class="btn btn-primary btn-sm" type="submit">Login</button>
+            <button class="btn btn-primary btn-sm btn-block" type="submit">Sign In</button>
           </form>
-          <small class="app-muted">Demo: user@focusacademy.test / User@123</small>
+          <small class="app-muted d-block mt-2">Demo: user@focusacademy.test / User@123</small>
         </div>
-        <div class="app-card">
-          <h3>Sign Up</h3>
+      `;
+    }
+
+    if (showBoth || showSignupOnly) {
+      formHTML += `
+        <div class="app-card ${showSignupOnly ? 'w-100' : ''}">
+          <h3>${showSignupOnly ? 'Create Your Account' : 'Sign Up'}</h3>
           <form id="signup-form">
             <input class="form-control mb-2" type="text" name="name" placeholder="Full Name" required>
             <input class="form-control mb-2" type="email" name="email" placeholder="Email" required>
             <input class="form-control mb-2" type="password" name="password" placeholder="Password (min 8 chars)" required>
-            <button class="btn btn-primary btn-sm" type="submit">Create Account</button>
+            <button class="btn btn-primary btn-sm btn-block" type="submit">Create Account</button>
           </form>
-          <div id="google-auth-wrap" class="mt-2"></div>
+          <div id="google-auth-wrap" class="mt-3 text-center"></div>
         </div>
-      </div>
-      <p id="auth-error" class="text-danger mt-2" style="display:none;"></p>
-    `;
+      `;
+    }
+
+    const layoutClass = showBoth ? "app-auth-grid" : "app-auth-single";
+    container.innerHTML = `<div class="${layoutClass}">${formHTML}</div>`;
 
     const showError = (message) => {
       const error = container.querySelector("#auth-error");
@@ -145,7 +162,7 @@
 
       window.google.accounts.id.renderButton(container.querySelector("#google-auth-wrap"), {
         theme: "outline",
-        size: "medium",
+        size: "large",
         text: "continue_with",
       });
     } else {

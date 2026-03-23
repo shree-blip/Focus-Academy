@@ -2,41 +2,82 @@
 layout: about
 title: about
 permalink: /
-subtitle: US Tax Training Academy · Focus Academy · Tinkune, Kathmandu
+subtitle: Professional Tax Training Academy · Tinkune, Kathmandu
 
 profile:
   align: right
   image: Focus-logo.png
-  image_circular: false # crops the image to make it circular
+  image_circular: false
   more_info: >
-    <p>Focus Academy</p>
+    <p><strong>Focus Academy</strong></p>
+    <p>Tax Training & Professional Development</p>
     <p>Tinkune, Kathmandu</p>
     <p>info@focusyourfinance.com</p>
 
-selected_papers: false # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
+selected_papers: false
+social: true
 
 announcements:
-  enabled: true # includes a list of news items
-  scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-  limit: 5 # leave blank to include all the news in the `_news` folder
+  enabled: true
+  scrollable: true
+  limit: 5
 
 latest_posts:
   enabled: false
-  scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
-  limit: 3 # leave blank to include all the blog posts
+  scrollable: true
+  limit: 3
 ---
 
-Welcome to the **US Tax Training Academy** by Focus Academy.
+## Welcome to Focus Academy
 
-Our flagship program is the **Complete Individual & Business Tax Preparation Program**, designed for accounting students, international accountants, tax preparers, bookkeepers, and entrepreneurs.
+**Transform Your Career with Professional Tax Training**
 
-The curriculum includes 22 core classes and 4 bonus modules with practical return-building assignments, software workflow training, and dual final assessments:
+At Focus Academy, we provide comprehensive, hands-on tax training and accounting education designed for professionals who want to master US tax compliance and return preparation.
 
-- **Part A:** 90-minute written exam
-- **Part B:** 3-hour practical exam from a complete scenario package
+### Our Flagship Program: Complete Individual & Business Tax Preparation
 
-Learners are trained to prepare complete US tax returns including Form 1040 and foundational business filings (Forms 1120, 1120S, and 1065).
+Our structured program combines theory, software training, and real-world practice scenarios:
+
+#### 📚 **Program Structure**
+- **22 Core Classes** covering individual and business taxation
+- **4 Bonus Modules** with advanced topics
+- **Hands-on Software Training** in industry-standard platforms
+- **Practical Return Building** from complete scenario packages
+
+#### 🎯 **What You'll Master**
+- Individual tax returns (Form 1040 and schedules)
+- Business income taxation (Forms 1120, 1120S, 1065)
+- Tax planning and compliance strategies
+- Real-world case studies and advanced scenarios
+
+#### ✅ **Dual Final Assessment**
+- **Part A:** 90-minute written examination
+- **Part B:** 3-hour practical exam with complete scenario packages
+
+#### 👥 **Who Should Join?**
+- Accounting and finance students
+- International accountants seeking US tax expertise
+- Tax preparers and bookkeepers
+- Entrepreneurs and business owners
+- Finance professionals expanding credentials
+
+---
+
+### How It Works
+
+**Get Started Today:**
+1. [Explore our courses](/teaching/) to find the right program for you
+2. [Create your account](/signup/) to enroll
+3. Access interactive lessons, software labs, and mentor guidance
+4. Complete practical assignments and pass rigorous assessments
+5. Earn your completion certificate
+
+**Ready to advance your tax expertise?**
+<div style="margin-top: 20px;">
+<a href="/signup/" class="btn btn-primary btn-lg">Start Learning Now</a>
+<a href="/teaching/" class="btn btn-outline-primary btn-lg" style="margin-left: 15px;">Explore Courses</a>
+</div>
+
 
 All pre-recorded content is delivered through domain-locked video hosting and LMS-controlled access.
 

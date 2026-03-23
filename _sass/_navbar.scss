@@ -158,7 +158,8 @@
 }
 
 .nav-cta-primary,
-.nav-cta-secondary {
+.nav-cta-secondary,
+.nav-cta-default {
   font-weight: 600;
   border-radius: 999px !important;
   border: 1px solid transparent;
@@ -180,6 +181,16 @@
   border-color: var(--global-surface-border);
 
   &:hover {
+    border-color: var(--global-theme-color);
+  }
+}
+
+.nav-cta-default {
+  color: var(--global-text-color) !important;
+  border-color: var(--global-surface-border);
+
+  &:hover {
+    color: var(--global-theme-color) !important;
     border-color: var(--global-theme-color);
   }
 }
