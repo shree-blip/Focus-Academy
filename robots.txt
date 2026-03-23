@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://academy.focusyourfinance.com/sitemap.xml
