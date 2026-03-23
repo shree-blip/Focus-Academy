@@ -6,4 +6,4 @@ inline: true
 related_posts: false
 ---
 
-The full learning path is now published: beginner (Classes 1-5), intermediate (6-12), advanced (13-19), and expert (20-22), followed by bonus modules and final written/practical exams.
+The full learning path is published with module sequencing from foundations to advanced filing practice, followed by a 90-minute written exam and a 3-hour practical assessment.

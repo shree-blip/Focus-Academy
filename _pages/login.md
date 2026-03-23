@@ -9,7 +9,7 @@ custom_js:
   - app-auth
 ---
 
-<section class="auth-page">
+<section class="auth-page app-shell" data-api-base="{{ site.api_base_url }}" data-google-client-id="{{ site.google_oauth_client_id }}">
   <div class="auth-container">
     <div class="auth-card">
       <div class="auth-header">

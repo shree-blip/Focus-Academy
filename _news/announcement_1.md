@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Admissions are open for the **Complete Individual & Business Tax Preparation Program** (22 core classes + 4 bonus modules).
+Admissions are now open for the **Complete Individual & Business Tax Preparation Program** with 22 core classes and 3 bonus modules.

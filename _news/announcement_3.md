@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Pre-recorded classes are secured with domain lock and dynamic watermarking. Live workshops and assessment support are delivered through the teaching portal.
+Learner content is protected with domain lock and dynamic watermarking, while live doubt-clearing workshops and assessment support are delivered through the teaching portal.

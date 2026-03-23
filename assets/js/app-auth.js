@@ -1,8 +1,16 @@
 (function () {
   const appRoot = document.querySelector(".app-shell");
-  const apiBaseFromPage = appRoot?.dataset?.apiBase || "";
+  const authShell = document.getElementById("auth-shell");
+  const firstNonEmpty = (...values) => values.find((value) => typeof value === "string" && value.trim() !== "") || "";
+  const apiBaseFromPage = firstNonEmpty(authShell?.dataset?.apiBase, appRoot?.dataset?.apiBase);
+  const googleClientIdFromPage = firstNonEmpty(authShell?.dataset?.googleClientId, appRoot?.dataset?.googleClientId);
   const API_BASE = (window.FOCUS_API_BASE || apiBaseFromPage || "http://localhost:5050").replace(/\/$/, "");
-  const GOOGLE_CLIENT_ID = appRoot?.dataset?.googleClientId || "";
+  const GOOGLE_CLIENT_ID = googleClientIdFromPage;
+
+  function resolvePostAuthRoute(user) {
+    const role = String(user?.role || "").toLowerCase();
+    return role === "admin" || role === "superadmin" ? "/admin/" : "/dashboard/";
+  }
 
   function getAuth() {
     const token = localStorage.getItem("focus_token");
@@ -48,7 +56,7 @@
     return payload;
   }
 
-  function authUI(container, onAuthed) {
+  function authUI(container, onAuthed = () => {}) {
     if (!container) return;
 
     const { token, user } = getAuth();
@@ -179,6 +187,17 @@
     getAuth,
     setAuth,
     clearAuth,
+    resolvePostAuthRoute,
     authUI,
   };
+
+  const hasUserDashboardShell = !!document.querySelector("#user-dashboard-shell");
+  const hasAdminDashboardShell = !!document.querySelector("#admin-dashboard-shell");
+  const isStandaloneAuthPage = !!authShell && !hasUserDashboardShell && !hasAdminDashboardShell;
+
+  if (isStandaloneAuthPage) {
+    authUI(authShell, (user) => {
+      window.location.assign(resolvePostAuthRoute(user));
+    });
+  }
 })();

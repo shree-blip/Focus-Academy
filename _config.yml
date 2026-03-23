@@ -8,7 +8,7 @@ middle_name:
 last_name: Academy
 email: info@focusyourfinance.com
 contact_note: >
-  You can even add a little note about which of these is the best way to reach you.
+  For admissions and support, contact us on WhatsApp or email. Typical response time is within one business day.
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   Official Academic Platform for Focus Your Finance.
 footer_text: >
@@ -268,8 +268,8 @@ jekyll-archives:
   books:
     enabled: [year, tags, categories] # enables year, tag and category archives (remove if you need to disable one of them).
 
-display_tags: ["formatting", "images", "links", "math", "code", "blockquotes"] # these tags will be displayed on the front page of your blog
-display_categories: ["external-services"] # these categories will be displayed on the front page of your blog
+display_tags: ["us-tax", "tax-training", "form-1040", "irs-notices", "career-guidance"] # these tags will be displayed on the front page of your blog
+display_categories: ["training-updates", "filing-fundamentals", "tax-compliance"] # these categories will be displayed on the front page of your blog
 
 # -----------------------------------------------------------------------------
 # Jekyll Scholar
