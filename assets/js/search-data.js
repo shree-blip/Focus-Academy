@@ -9,19 +9,26 @@ ninja.data = [{
     handler: () => {
       window.location.href = "/";
     },
-  },{id: "nav-mentors",
+  },{id: "nav-sign-in",
+          title: "Sign In",
+          description: "Sign in to Focus Academy to access your courses and learning dashboard",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/login/";
+          },
+        },{id: "nav-create-account",
+          title: "Create Account",
+          description: "Register for Focus Academy to begin your tax training journey",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/signup/";
+          },
+        },{id: "nav-mentors",
           title: "mentors",
           description: "Focus Academy US Certified Mentors",
           section: "Navigation",
           handler: () => {
             window.location.href = "/people/";
-          },
-        },{id: "nav-operations",
-          title: "operations",
-          description: "course, enrollment, and payment operations blueprint",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/operations/";
           },
         },{id: "news-admissions-are-open-for-the-complete-individual-amp-amp-business-tax-preparation-program-22-core-classes-4-bonus-modules",
           title: 'Admissions are open for the Complete Individual &amp;amp;amp; Business Tax Preparation Program (22...',
