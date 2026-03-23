@@ -27,6 +27,9 @@
 @use "components";
 @use "utilities";
 
+// Auth pages
+@use "auth";
+
 // Other specialized styles
 @use "distill";
 @use "cv";

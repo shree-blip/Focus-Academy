@@ -3,12 +3,10 @@ layout: page
 permalink: /admin/
 title: admin
 description: admin dashboard preview for Focus Academy
-nav: true
-nav_order: 9
-google_auth: true
+nav: false
 custom_js:
-	- app-auth
-	- admin-dashboard-app
+  - app-auth
+  - admin-dashboard-app
 ---
 
 <section class="app-shell" data-api-base="{{ site.api_base_url }}" data-google-client-id="{{ site.google_oauth_client_id }}">
