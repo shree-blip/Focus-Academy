@@ -16,14 +16,75 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/people/";
           },
-        },{id: "news-admissions-are-open-for-the-complete-individual-amp-amp-business-tax-preparation-program-22-core-classes-4-bonus-modules",
-          title: 'Admissions are open for the Complete Individual &amp;amp;amp; Business Tax Preparation Program (22...',
+        },{id: "post-",
+        
+          title: "",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/2026-03-23-standard-vs-itemized-deduction/";
+          
+        },
+      },{id: "post-",
+        
+          title: "",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/2026-03-23-responding-to-common-irs-notices/";
+          
+        },
+      },{id: "post-w-2-vs-1099-income-basics-for-new-tax-preparers",
+        
+          title: "W-2 vs 1099 Income Basics for New Tax Preparers",
+        
+        description: "Understand the core differences between employee and contractor income before preparing returns.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/w2-vs-1099-basics/";
+          
+        },
+      },{id: "post-form-1040-schedules-explained-for-beginners",
+        
+          title: "Form 1040 Schedules Explained for Beginners",
+        
+        description: "A beginner-friendly overview of where common income, tax, and credit items are reported.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/form-1040-schedules-explained/";
+          
+        },
+      },{id: "post-common-filing-status-mistakes-and-how-to-avoid-them",
+        
+          title: "Common Filing Status Mistakes and How to Avoid Them",
+        
+        description: "A practical guide to selecting the correct filing status and avoiding common return errors.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/common-filing-status-mistakes/";
+          
+        },
+      },{id: "news-admissions-are-now-open-for-the-complete-individual-amp-amp-business-tax-preparation-program-with-22-core-classes-and-3-bonus-modules",
+          title: 'Admissions are now open for the Complete Individual &amp;amp;amp; Business Tax Preparation Program...',
           description: "",
-          section: "News",},{id: "news-the-full-learning-path-is-now-published-beginner-classes-1-5-intermediate-6-12-advanced-13-19-and-expert-20-22-followed-by-bonus-modules-and-final-written-practical-exams",
-          title: 'The full learning path is now published: beginner (Classes 1-5), intermediate (6-12), advanced...',
+          section: "News",},{id: "news-the-full-learning-path-is-published-with-module-sequencing-from-foundations-to-advanced-filing-practice-followed-by-a-90-minute-written-exam-and-a-3-hour-practical-assessment",
+          title: 'The full learning path is published with module sequencing from foundations to advanced...',
           description: "",
-          section: "News",},{id: "news-pre-recorded-classes-are-secured-with-domain-lock-and-dynamic-watermarking-live-workshops-and-assessment-support-are-delivered-through-the-teaching-portal",
-          title: 'Pre-recorded classes are secured with domain lock and dynamic watermarking. Live workshops and...',
+          section: "News",},{id: "news-learner-content-is-protected-with-domain-lock-and-dynamic-watermarking-while-live-doubt-clearing-workshops-and-assessment-support-are-delivered-through-the-teaching-portal",
+          title: 'Learner content is protected with domain lock and dynamic watermarking, while live doubt-clearing...',
+          description: "",
+          section: "News",},{id: "news-weekend-live-workshop-slots-are-available-for-revision-classes-on-form-1040-schedules-filing-status-decisions-and-dependent-related-case-practice",
+          title: 'Weekend live workshop slots are available for revision classes on Form 1040 schedules,...',
+          description: "",
+          section: "News",},{id: "news-module-1-to-module-3-assignment-checklists-are-now-available-in-the-learner-portal-with-submission-deadlines-and-feedback-timelines",
+          title: 'Module 1 to Module 3 assignment checklists are now available in the learner...',
           description: "",
           section: "News",},{id: "teachings-complete-individual-amp-business-tax-preparation-program",
           title: 'Complete Individual &amp;amp; Business Tax Preparation Program',
@@ -36,25 +97,11 @@ ninja.data = [{
           section: "Teachings",handler: () => {
               window.location.href = "/teachings/introduction-to-machine-learning/";
             },},{
-        id: 'social-cv',
-        title: 'CV',
-        section: 'Socials',
-        handler: () => {
-          window.open("/assets/pdf/example_pdf.pdf", "_blank");
-        },
-      },{
         id: 'social-email',
         title: 'email',
         section: 'Socials',
         handler: () => {
-          window.open("mailto:%79%6F%75@%65%78%61%6D%70%6C%65.%63%6F%6D", "_blank");
-        },
-      },{
-        id: 'social-inspire',
-        title: 'Inspire HEP',
-        section: 'Socials',
-        handler: () => {
-          window.open("https://inspirehep.net/authors/1010907", "_blank");
+          window.open("mailto:%69%6E%66%6F@%66%6F%63%75%73%79%6F%75%72%66%69%6E%61%6E%63%65.%63%6F%6D", "_blank");
         },
       },{
         id: 'social-rss',
@@ -64,18 +111,11 @@ ninja.data = [{
           window.open("/feed.xml", "_blank");
         },
       },{
-        id: 'social-scholar',
-        title: 'Google Scholar',
-        section: 'Socials',
-        handler: () => {
-          window.open("https://scholar.google.com/citations?user=qc6CJjYAAAAJ", "_blank");
-        },
-      },{
         id: 'social-custom_social',
         title: 'Custom_social',
         section: 'Socials',
         handler: () => {
-          window.open("https://www.alberteinstein.com/", "_blank");
+          window.open("https://wa.me/9779800000000", "_blank");
         },
       },{
       id: 'light-theme',
