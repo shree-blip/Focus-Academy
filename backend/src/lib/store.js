@@ -16,6 +16,7 @@ function seedUsers() {
       email: "admin@focusacademy.test",
       passwordHash: bcrypt.hashSync("Admin@123", 10),
       role: "admin",
+      plan: null,
       createdAt: new Date().toISOString(),
     },
     {
@@ -24,6 +25,7 @@ function seedUsers() {
       email: "user@focusacademy.test",
       passwordHash: bcrypt.hashSync("User@123", 10),
       role: "learner",
+      plan: "physical",
       createdAt: new Date().toISOString(),
     }
   );

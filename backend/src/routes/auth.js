@@ -10,6 +10,7 @@ const registerSchema = z.object({
   name: z.string().min(2),
   email: z.string().email(),
   password: z.string().min(8),
+  plan: z.enum(["physical", "online"]).optional(),
 });
 
 const loginSchema = z.object({
@@ -30,7 +31,7 @@ authRouter.post("/register", async (req, res) => {
     return res.status(400).json({ message: "Invalid payload", errors: parsed.error.issues });
   }
 
-  const { name, email, password } = parsed.data;
+  const { name, email, password, plan } = parsed.data;
   const normalizedEmail = email.toLowerCase();
 
   if (db.users.some((entry) => entry.email === normalizedEmail)) {
@@ -43,6 +44,7 @@ authRouter.post("/register", async (req, res) => {
     email: normalizedEmail,
     passwordHash: await hashPassword(password),
     role: "learner",
+    plan: plan || null,
     createdAt: new Date().toISOString(),
   };
 
@@ -116,6 +118,7 @@ authRouter.post("/google", async (req, res) => {
         email,
         passwordHash: await hashPassword(uuidv4()),
         role: "learner",
+        plan: null,
         provider: "google",
         createdAt: new Date().toISOString(),
       };

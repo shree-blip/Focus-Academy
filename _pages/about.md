@@ -79,6 +79,40 @@ latest_posts:
 </section>
 
 <section class="landing-section">
+  <h2>Pricing & Enrollment Format</h2>
+  <div class="landing-pricing-grid">
+    <article class="landing-pricing-card landing-pricing-card-active">
+      <div class="landing-pricing-badges">
+        <span class="badge badge-success">Active Intake</span>
+        <span class="badge badge-primary">Next Batch: Apr 15</span>
+      </div>
+      <h3>Physical Class (Tinkune, Kathmandu)</h3>
+      <p class="landing-pricing-value">NPR 20,000 <small>+ VAT</small></p>
+      <ul>
+        <li>In-person classes with mentor interaction</li>
+        <li>Live practical filing workshops</li>
+        <li>Assignment review and assessment support</li>
+      </ul>
+      <a href="/signup/?plan=physical" class="btn btn-primary btn-lg btn-block">Book Your Seat</a>
+    </article>
+
+    <article class="landing-pricing-card landing-pricing-card-soon">
+      <div class="landing-pricing-badges">
+        <span class="badge badge-warning">Coming Soon</span>
+      </div>
+      <h3>Online Pre-recorded Class</h3>
+      <p class="landing-pricing-value">NPR 10,000</p>
+      <ul>
+        <li>Self-paced video-based learning format</li>
+        <li>Same core curriculum, recorded delivery</li>
+        <li>Launch notification available on signup</li>
+      </ul>
+      <button class="btn btn-outline-secondary btn-lg btn-block" type="button" disabled>Available Soon</button>
+    </article>
+  </div>
+</section>
+
+<section class="landing-section">
   <h2>How It Works</h2>
   <div class="landing-steps">
     <div class="landing-step">

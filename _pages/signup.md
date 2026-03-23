@@ -17,6 +17,8 @@ custom_js:
         <p>Get started with Focus Academy tax training programs</p>
       </div>
 
+      <div id="enrollment-summary" class="mb-3"></div>
+
       <div id="auth-shell" class="auth-form" data-api-base="{{ site.api_base_url }}" data-google-client-id="{{ site.google_oauth_client_id }}" data-page="signup"></div>
 
       <div class="auth-footer">

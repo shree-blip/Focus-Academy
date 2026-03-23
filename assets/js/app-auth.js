@@ -12,6 +12,30 @@
     return role === "admin" || role === "superadmin" ? "/admin/" : "/dashboard/";
   }
 
+  function getSelectedPlanFromUrl() {
+    const params = new URLSearchParams(window.location.search || "");
+    const plan = String(params.get("plan") || "").toLowerCase();
+    return plan === "physical" || plan === "online" ? plan : null;
+  }
+
+  function getPlanMeta(plan) {
+    if (plan === "physical") {
+      return {
+        title: "US Tax Training (Physical Class)",
+        price: "NPR 20,000 + VAT",
+      };
+    }
+
+    if (plan === "online") {
+      return {
+        title: "US Tax Training (Online Pre-recorded Class)",
+        price: "NPR 10,000",
+      };
+    }
+
+    return null;
+  }
+
   function getAuth() {
     const token = localStorage.getItem("focus_token");
     const user = localStorage.getItem("focus_user");
@@ -75,6 +99,8 @@
     const showBoth = pageMode === "both";
     const showLoginOnly = pageMode === "login";
     const showSignupOnly = pageMode === "signup";
+    const selectedPlan = getSelectedPlanFromUrl();
+    const selectedPlanMeta = getPlanMeta(selectedPlan);
 
     let formHTML = `
       <p id="auth-error" class="text-danger mb-3" style="display:none;"></p>
@@ -125,6 +151,17 @@
 
     const layoutClass = showBoth ? "app-auth-grid" : "app-auth-single";
     container.innerHTML = `<div class="${layoutClass}">${formHTML}</div>`;
+
+    const enrollmentSummary = document.getElementById("enrollment-summary");
+    if (enrollmentSummary) {
+      if (selectedPlanMeta) {
+        enrollmentSummary.innerHTML = `<div class="alert alert-info mb-0"><strong>Selected:</strong> ${selectedPlanMeta.title} — ${selectedPlanMeta.price}</div>`;
+      } else if (showSignupOnly) {
+        enrollmentSummary.innerHTML = `<div class="alert alert-light mb-0"><strong>Tip:</strong> You can choose your preferred class format from the pricing section.</div>`;
+      } else {
+        enrollmentSummary.innerHTML = "";
+      }
+    }
 
     const showError = (message) => {
       const error = container.querySelector("#auth-error");
@@ -185,6 +222,7 @@
             name: form.get("name"),
             email: form.get("email"),
             password: form.get("password"),
+            plan: selectedPlan || undefined,
           }),
         });
         setAuth(data.token, data.user);
