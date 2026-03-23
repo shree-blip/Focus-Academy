@@ -1,0 +1,231 @@
+.landing-eyebrow {
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--global-theme-color);
+  font-size: 0.8rem;
+}
+
+.landing-hero {
+  background: var(--global-surface-color);
+  border: 1px solid var(--global-surface-border);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+
+  h1,
+  h2 {
+    margin-top: 0.55rem;
+    margin-bottom: 0.6rem;
+  }
+}
+
+.landing-hero-bottom {
+  text-align: center;
+}
+
+.landing-lead {
+  color: var(--global-text-muted);
+  margin-bottom: 0;
+}
+
+.landing-cta-row {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.landing-section {
+  margin-top: 2rem;
+
+  h2 {
+    margin-bottom: 0.75rem;
+  }
+}
+
+.landing-grid {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.landing-grid-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.landing-grid-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.landing-card {
+  border: 1px solid var(--global-surface-border);
+  border-radius: 0.9rem;
+  padding: 1rem;
+  background: var(--global-bg-color);
+
+  h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1.03rem;
+  }
+
+  ul {
+    margin-bottom: 0;
+  }
+}
+
+.landing-steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.landing-step {
+  border: 1px solid var(--global-surface-border);
+  border-radius: 0.9rem;
+  padding: 1rem;
+  background: var(--global-bg-color);
+
+  span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.8rem;
+    height: 1.8rem;
+    border-radius: 50%;
+    font-weight: 700;
+    color: var(--global-hover-text-color);
+    background: var(--global-theme-color);
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.landing-chip {
+  border: 1px solid var(--global-surface-border);
+  border-radius: 999px;
+  padding: 0.5rem 0.75rem;
+  background: var(--global-bg-color);
+  text-align: center;
+}
+
+.landing-muted {
+  color: var(--global-text-muted);
+}
+
+.landing-video-frame {
+  width: 100%;
+  border-radius: 0.9rem;
+  overflow: hidden;
+  border: 1px solid var(--global-surface-border);
+  background: #000;
+
+  iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    display: block;
+    border: 0;
+  }
+}
+
+.landing-carousel {
+  border: 1px solid var(--global-surface-border);
+  border-radius: 1rem;
+  padding: 2.25rem 2.75rem;
+  background: var(--global-surface-color);
+
+  .carousel-indicators {
+    bottom: -1.9rem;
+  }
+
+  .carousel-indicators li {
+    background-color: var(--global-theme-color);
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 2.2rem;
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    width: 2rem;
+    height: 2rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    background-size: 55% 55%;
+  }
+}
+
+.landing-mentor-card {
+  border: 1px solid var(--global-surface-border);
+  border-radius: 0.9rem;
+  text-align: center;
+  background: var(--global-bg-color);
+  padding: 1rem;
+
+  img {
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 0.6rem;
+    max-width: 100%;
+    height: auto;
+  }
+
+  h3 {
+    margin: 0;
+    font-size: 1.05rem;
+  }
+
+  p {
+    margin-top: 0.35rem;
+    margin-bottom: 0;
+    color: var(--global-text-muted);
+  }
+}
+
+.landing-faq-item {
+  border: 1px solid var(--global-surface-border);
+  border-radius: 0.75rem;
+  background: var(--global-bg-color);
+  padding: 0.75rem 0.95rem;
+  margin-bottom: 0.7rem;
+
+  summary {
+    cursor: pointer;
+    font-weight: 600;
+  }
+
+  p {
+    margin-top: 0.65rem;
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 992px) {
+  .landing-grid-2,
+  .landing-grid-3,
+  .landing-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .landing-carousel {
+    padding: 1rem 1.1rem 2.1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .landing-hero {
+    padding: 1rem;
+  }
+
+  .landing-cta-row {
+    .btn {
+      width: 100%;
+    }
+  }
+}

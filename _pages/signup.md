@@ -3,7 +3,7 @@ layout: page
 permalink: /signup/
 title: Create Account
 description: Register for Focus Academy to begin your tax training journey
-nav: true
+nav: false
 nav_order: 4
 custom_js:
   - app-auth

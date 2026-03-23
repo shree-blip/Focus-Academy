@@ -3,7 +3,7 @@ layout: page
 permalink: /login/
 title: Sign In
 description: Sign in to Focus Academy to access your courses and learning dashboard
-nav: true
+nav: false
 nav_order: 3
 custom_js:
   - app-auth
