@@ -42,10 +42,15 @@
       headers.Authorization = `Bearer ${token}`;
     }
 
-    const response = await fetch(`${API_BASE}${path}`, {
-      ...options,
-      headers,
-    });
+    let response;
+    try {
+      response = await fetch(`${API_BASE}${path}`, {
+        ...options,
+        headers,
+      });
+    } catch (error) {
+      throw new Error(`Unable to connect to backend at ${API_BASE}. Please check server status and CORS settings.`);
+    }
 
     const payload = await response.json().catch(() => ({}));
 
@@ -81,7 +86,14 @@
           <h3>Login</h3>
           <form id="login-form">
             <input class="form-control mb-2" type="email" name="email" placeholder="Email" required>
-            <input class="form-control mb-2" type="password" name="password" placeholder="Password" required>
+            <div class="auth-password-group input-group mb-2">
+              <input id="login-password" class="form-control" type="password" name="password" placeholder="Password" required>
+              <div class="input-group-append">
+                <button class="btn btn-outline-secondary password-toggle" type="button" data-target="login-password" aria-label="Show password">
+                  <i class="fas fa-eye" aria-hidden="true"></i>
+                </button>
+              </div>
+            </div>
             <button class="btn btn-primary btn-sm btn-block" type="submit">Sign In</button>
           </form>
           <small class="app-muted d-block mt-2">Demo: user@focusacademy.test / User@123</small>
@@ -96,7 +108,14 @@
           <form id="signup-form">
             <input class="form-control mb-2" type="text" name="name" placeholder="Full Name" required>
             <input class="form-control mb-2" type="email" name="email" placeholder="Email" required>
-            <input class="form-control mb-2" type="password" name="password" placeholder="Password (min 8 chars)" required>
+            <div class="auth-password-group input-group mb-2">
+              <input id="signup-password" class="form-control" type="password" name="password" placeholder="Password (min 8 chars)" required>
+              <div class="input-group-append">
+                <button class="btn btn-outline-secondary password-toggle" type="button" data-target="signup-password" aria-label="Show password">
+                  <i class="fas fa-eye" aria-hidden="true"></i>
+                </button>
+              </div>
+            </div>
             <button class="btn btn-primary btn-sm btn-block" type="submit">Create Account</button>
           </form>
           <div id="google-auth-wrap" class="mt-3 text-center"></div>
@@ -110,9 +129,33 @@
     const showError = (message) => {
       const error = container.querySelector("#auth-error");
       if (!error) return;
+
+      const finalMessage = /failed to fetch/i.test(String(message || ""))
+        ? `Unable to connect to backend at ${API_BASE}. Please start the API server and verify CORS_ORIGIN.`
+        : message;
+
       error.style.display = "block";
-      error.textContent = message;
+      error.textContent = finalMessage;
     };
+
+    container.querySelectorAll(".password-toggle").forEach((button) => {
+      button.addEventListener("click", () => {
+        const targetId = button.getAttribute("data-target");
+        const input = targetId ? container.querySelector(`#${targetId}`) : null;
+        if (!input) return;
+
+        const isHidden = input.type === "password";
+        input.type = isHidden ? "text" : "password";
+
+        const icon = button.querySelector("i");
+        if (icon) {
+          icon.classList.toggle("fa-eye", !isHidden);
+          icon.classList.toggle("fa-eye-slash", isHidden);
+        }
+
+        button.setAttribute("aria-label", isHidden ? "Hide password" : "Show password");
+      });
+    });
 
     container.querySelector("#login-form")?.addEventListener("submit", async (event) => {
       event.preventDefault();

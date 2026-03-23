@@ -54,6 +54,24 @@
   margin: 25px 0;
 }
 
+.auth-password-group {
+  .form-control {
+    margin-bottom: 0 !important;
+  }
+
+  .password-toggle {
+    border-color: #ced4da;
+    color: #666;
+
+    &:hover,
+    &:focus {
+      color: #667eea;
+      background: #f8f9fa;
+      box-shadow: none;
+    }
+  }
+}
+
 .auth-footer {
   text-align: center;
   border-top: 1px solid #eee;
